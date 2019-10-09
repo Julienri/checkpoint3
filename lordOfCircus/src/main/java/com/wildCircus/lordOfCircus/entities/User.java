@@ -1,9 +1,12 @@
 package com.wildCircus.lordOfCircus.entities;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class User{
@@ -27,6 +30,9 @@ public class User{
     private String mail;
     private String password;
     private String type;
+
+    @ManyToMany(mappedBy = "users")
+    private Set<Ticket> tickets;
 
     public int getId() {
         return id;
@@ -74,6 +80,14 @@ public class User{
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Set<Ticket> getTickets() {
+        return tickets;
+    }
+
+    public void setTickets(Set<Ticket> tickets) {
+        this.tickets = tickets;
     }
 
 }
