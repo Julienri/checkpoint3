@@ -1,0 +1,12 @@
+header{
+    background-color: #4f837f;
+}
+.nav-link{
+    color: whitesmoke;
+}
+body{
+    background: url(img/moriDoor.jpg) no-repeat fixed center;
+    background-size: auto;
+    background-color: #336965;
+
+}
