@@ -3,10 +3,20 @@ header{
 }
 .nav-link{
     color: whitesmoke;
+    font-size: 23px;
+    font-weight: bold;
 }
 body{
     background: url(img/moriDoor.jpg) no-repeat fixed center;
-    background-size: auto;
+    background-size: 100%;
     background-color: #336965;
-
+}
+.jumbotron{
+    background-color: rgba(255,250,250, 0.6)
+}
+.btn-home{
+    background-color: #4f837f;
+    color : white;
+    font-size : 20px;
+    font-weight: bold;
 }
