@@ -6,7 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
+
 
 @Entity
 public class User{
@@ -31,7 +34,11 @@ public class User{
     private String password;
     private String type;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany
+    @JoinTable(
+        name = "user_ticket",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "ticket_id"))
     private Set<Ticket> tickets;
 
     public int getId() {
@@ -89,5 +96,4 @@ public class User{
     public void setTickets(Set<Ticket> tickets) {
         this.tickets = tickets;
     }
-
 }

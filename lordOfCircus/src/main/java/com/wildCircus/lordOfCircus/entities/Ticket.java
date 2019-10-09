@@ -2,13 +2,13 @@ package com.wildCircus.lordOfCircus.entities;
 
 import java.util.Set;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+@Entity
 public class Ticket{
 
     public Ticket(){
@@ -27,12 +27,9 @@ public class Ticket{
     private double price;
     private int ticketTaken;
 
-    @ManyToMany
-    @JoinTable(
-        name = "ticket_user",
-        joinColumns = @JoinColumn(name = "ticket_id"),
-        inverseJoinColumns = @JoinColumn(name = "user_id"))
+    @ManyToMany(mappedBy = "tickets")
     private Set<User> users;
+
 
     public int getId() {
         return id;
