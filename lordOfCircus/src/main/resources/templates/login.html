@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="row d-flex justify-content-center">
             <form th:action="@{/login}" method="post" th:object="${user}"
-                class="d-inline-block p-3 text-left rounded justify-content-center">
+                class="text-left rounded">
                 <div class="form-group">
                     <label for="mail" class="mb-2">Email</label>
                     <input class="form-control" type="text" name="username" id="mail" placeholder="exemple@mail.com"
@@ -26,7 +26,7 @@
             </form>
         </div>
         <div class="row d-flex justify-content-center msgConnexion">
-            <p>Vous n'avez pas de compte ? <a class="inscription" th:href="@{/subscribe}">Inscrivez vous !</a></p>
+            <p>Vous n'avez pas de compte ? <a class="inscription" href="/subscribe">Inscrivez vous !</a></p>
         </div>
     </div>
 

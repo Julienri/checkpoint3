@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<div th:replace="fragments/head.html :: head"></div>
+
+<body class="loginBody">
+    <header th:replace="fragments/header.html :: header"></header>
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+        <form class="text-center border border-light " th:action="@{/subscribe}" th:object="${user}"
+            method="POST">
+            <p>Inscription</p>
+            <div class="form-row mb-4">
+                <div class="col-6">
+                    <input class="form-control" type="text" placeholder="Prénom *" th:field="*{firstname}" required>
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" placeholder="Nom *" th:field="*{lastname}" required>
+                </div>
+            </div>
+            <input class="form-control mb-4" type="email" placeholder="E-mail *" th:field="*{mail}" required>
+            <input class="form-control" type="password" placeholder="Mot de passe *" th:field="*{password}" required>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-info my-4 btn-block">Valider</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    
+    <script th:replace="fragments/script.html :: script"></script>
+
+</body>
+
+</html>

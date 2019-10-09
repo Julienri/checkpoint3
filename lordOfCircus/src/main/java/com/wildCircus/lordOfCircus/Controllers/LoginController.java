@@ -9,6 +9,7 @@ public class LoginController{
     public String login(){
         return "login";
     }
+    
     @GetMapping("/subscribe")
     public String subscribe(){
         return "subscribe";
