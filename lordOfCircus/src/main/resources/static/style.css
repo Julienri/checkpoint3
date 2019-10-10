@@ -30,6 +30,14 @@
     margin:0;
     padding:0;
 }
+.descriptionBody{
+    background: url(img/deuxRois.jpg) no-repeat fixed center;
+    background-size: 100%;
+    background-color: #336965;
+    background-size: cover;
+    margin:0;
+    padding:0;
+}
 
 .jumbotron{
     background-color: rgba(255,250,250, 0.8);
@@ -67,6 +75,9 @@
     font-weight: bold;
 }
 
+.profilePage{
+    margin-top: 8%;
+}
 
 table{
     margin-top: 16%;
