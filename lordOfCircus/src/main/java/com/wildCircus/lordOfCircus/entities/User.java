@@ -17,12 +17,12 @@ public class User{
     public User(){
     }
 
-    public User(String firstname, String lastname, String mail, String password, String type){
+    public User(String firstname, String lastname, String mail, String password, String race){
         this.firstname = firstname;
         this.lastname = lastname;
         this.mail = mail;
         this.password = password;
-        this.type = type;
+        this.race = race;
     }
 
     @Id
@@ -32,7 +32,7 @@ public class User{
     private String lastname;
     private String mail;
     private String password;
-    private String type;
+    private String race;
 
     @ManyToMany
     @JoinTable(
@@ -81,19 +81,19 @@ public class User{
         this.password = password;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public Set<Ticket> getTickets() {
         return tickets;
     }
 
     public void setTickets(Set<Ticket> tickets) {
         this.tickets = tickets;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
     }
 }

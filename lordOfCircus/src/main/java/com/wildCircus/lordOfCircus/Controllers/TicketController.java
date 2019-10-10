@@ -4,9 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class NavigationController{
-    @GetMapping("/")
-    public String home(){
-        return "home";
+public class TicketController{
+    @GetMapping("/getTicket")
+    public String ticket(){
+        return "tickets";
     }
 }

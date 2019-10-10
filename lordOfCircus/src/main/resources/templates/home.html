@@ -1,49 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lord Of Circus</title>
 
-        <!-- bootstrap CSS CDN -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" type="text/css" href="../static/style.css" th:href="@{style.css}">
-</head>
-<body>
-    <header>
-            <nav class="navbar navbar-expand-lg">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home (The Shire)<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login (Isengar)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Get Tickets(Mordor)</a>
-                        </li>
-                    </ul>
+<div th:replace="fragments/head.html :: head"></div>
+
+<body class="homeBody">
+    <header th:replace="fragments/header.html :: header"></header>
+
+
+    <div class="container">
+        <div class ="row d-flex justify-content-center">
+            <div class="jumbotron m-3">
+                <h1 class="d-flex justify-content-center">Welcome to the Mine Of Moria!</h1>
+                <p class="lead d-flex justify-content-center">Welcome! Madame, Sir, Children, come and discover the wonderful world of the Lord Of Circus</p>
+                <hr class="my-4">
+                <p class="lead center">"A ring to rule them all", you all know this sentence. Come in this circus inspired by the legendary movie The Lord of the Rings.
+                     You will discover our differents artists : dwarves, magi, elves, and other creatures. The middle earth is waiting for you</p>
+                <div class="text-center">
+                    <a class="btn btn-home btn-lg" href="#" role="button">Discover theses creatures</a>
                 </div>
-            </nav>
-    </header>
-
-    <div class="jumbotron">
-        <h1 class="display-4">Welcome to the Shire!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </div>
+        </div>
     </div>
+    
+    <script th:replace="fragments/script.html :: script"></script>
 
-    <div>
-        <script th:src="@{https://code.jquery.com/jquery-3.3.1.slim.min.js}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js}" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </div>
 </body>
 </html>

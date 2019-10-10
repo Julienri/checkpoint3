@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<div th:replace="fragments/head.html :: head"></div>
+
+<body class="loginBody">
+    <header th:replace="fragments/header.html :: header"></header>
+
+    <div class="container-fluid subscribe">
+        <div class="row d-flex justify-content-center">
+            <form class="text-center border border-light " th:action="@{/subscribe}" th:object="${user}" method="POST">
+                <p class="title-subscribe">Inscription</p>
+                <div class="form-row mb-4">
+                    <div class="col-6">
+                        <input class="form-control" type="text" placeholder="Prénom *" th:field="*{firstname}" required>
+                    </div>
+                    <div class="col-6">
+                        <input class="form-control" type="text" placeholder="Nom *" th:field="*{lastname}" required>
+                    </div>
+                </div>
+                <input class="form-control mb-4" type="email" placeholder="E-mail *" th:field="*{mail}" required>
+                <input class="form-control" type="password" placeholder="Mot de passe *" th:field="*{password}"
+                    required>
+                <!-- test race -->
+                <div class="form-row align-items-center">
+                    <div class="col-auto my-1">
+                        <label class="mr-sm-2 raceSelect" for="raceSelect">Your race</label>
+                        <select class="custom-select mr-sm-2" id="raceSelect" th:field="*{race}">
+                            <option th:value="Hobbit">Hobbit</option>
+                            <option th:value="Human">Human</option>
+                            <option th:value="Dwarf">Dwarf</option>
+                            <option th:value="Elf">Elf</option>
+                            <option th:value="Magi">Magi</option>
+                            <option th:value="Orc">Orc</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-info my-4 btn-block">Valider</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script th:replace="fragments/script.html :: script"></script>
+
+</body>
+
+</html>

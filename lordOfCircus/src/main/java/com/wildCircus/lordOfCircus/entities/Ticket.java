@@ -14,7 +14,7 @@ public class Ticket{
     public Ticket(){
     }
 
-    public Ticket(String category, double price, int ticketTaken){
+    public Ticket(String category, int price, String ticketTaken){
         this.category = category;
         this.price = price;
         this.ticketTaken = ticketTaken;
@@ -24,12 +24,11 @@ public class Ticket{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String category;
-    private double price;
-    private int ticketTaken;
+    private int price;
+    private String ticketTaken;
 
     @ManyToMany(mappedBy = "tickets")
     private Set<User> users;
-
 
     public int getId() {
         return id;
@@ -47,19 +46,19 @@ public class Ticket{
         this.category = category;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
-    public int getTicketTaken() {
+    public String getTicketTaken() {
         return ticketTaken;
     }
 
-    public void setTicketTaken(int ticketTaken) {
+    public void setTicketTaken(String ticketTaken) {
         this.ticketTaken = ticketTaken;
     }
 
@@ -70,4 +69,5 @@ public class Ticket{
     public void setUsers(Set<User> users) {
         this.users = users;
     }
+
 }
