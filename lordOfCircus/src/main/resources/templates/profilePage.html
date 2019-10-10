@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<div th:replace="fragments/head.html :: head"></div>
+
+<body class="homeBody">
+    <header th:replace="fragments/header.html :: header"></header>
+    <div class="container profilePage">
+        <div class="row d-flex justify-content-center">
+            <div class="card" style="width: 40rem;">
+                <img th:src="@{img/azogOrc.jpg}" class="card-img-top" alt="raceSelect">
+                <div class="card-body">
+                    <h5 class="card-title text-center" th:text="${firstname}"></h5>
+                    <p class="card-text">
+                        You bought 10 places for 80 €
+                    </p>
+                    <div class="text-center">
+                        <a th:href="@{/}" class="btn btn-home">Go back to The Moria</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <script th:replace="fragments/script.html :: script"></script>
+
+</body>
+
+</html>
