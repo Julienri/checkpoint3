@@ -57,14 +57,26 @@
     color :#e2725b;
     font-weight: bold;
 }
+.subscribe{
+    margin-top: 12%;
+    font-size: 15px;
+}
+.title-subscribe, .raceSelect{
+    color: white;
+    font-size : 25px;
+    font-weight: bold;
+}
+
+
 table{
-    margin-top: 13%;
+    margin-top: 16%;
     background-color: rgba(250,238,222,0.7);
     text-align: center;
+
 }
 td, th{
    color: #336965;
-   font-size: 20px;
+   font-size: 16px;
    font-weight: bold;
 }
 caption { 
