@@ -14,10 +14,10 @@ public class Ticket{
     public Ticket(){
     }
 
-    public Ticket(String category, int price, String ticketTaken){
+    public Ticket(String category, int price, String nbTicket){
         this.category = category;
         this.price = price;
-        this.ticketTaken = ticketTaken;
+        this.nbTicket = nbTicket;
     }
 
     @Id
@@ -25,7 +25,7 @@ public class Ticket{
     private int id;
     private String category;
     private int price;
-    private String ticketTaken;
+    private String nbTicket;
 
     @ManyToMany(mappedBy = "tickets")
     private Set<User> users;
@@ -54,12 +54,12 @@ public class Ticket{
         this.price = price;
     }
 
-    public String getTicketTaken() {
-        return ticketTaken;
+    public String getnbTicket() {
+        return nbTicket;
     }
 
-    public void setTicketTaken(String ticketTaken) {
-        this.ticketTaken = ticketTaken;
+    public void setnbTicket(String nbTicket) {
+        this.nbTicket = nbTicket;
     }
 
     public Set<User> getUsers() {
